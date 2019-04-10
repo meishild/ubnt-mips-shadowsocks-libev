@@ -21,7 +21,7 @@ Ci: [![Build Status](https://travis-ci.org/imMMX/ubnt-mips-shadowsocks-libev.svg
 2. 克隆仓库  
   ```git clone https://github.com/imMMX/ubnt-mips-shadowsocks-libev.git```  
 3. build 镜像   
-  ```docker build --tag ubnt-mips-shadowsocks-libev .```  
+  ```docker build --tag ubnt-mips-shadowsocks-libev --network=host .```  
 4. 启动容器  
   ```docker run -idt --name ubnt-mips-shadowsocks-libev ubnt-mips-shadowsocks-libev```
 5. 从容器中拷贝  
