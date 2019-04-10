@@ -23,13 +23,13 @@ Ci: [![Build Status](https://travis-ci.org/imMMX/ubnt-mips-shadowsocks-libev.svg
 3. build 镜像   
   ```docker build --tag ubnt-mips-shadowsocks-libev --network=host .```  
 4. 启动容器  
-  ```docker run -idt --name ubnt-mips-shadowsocks-libev ubnt-mips-shadowsocks-libev```
+  ```docker run -idt --name ubnt-mips-shadowsocks-libev ubnt-mips-shadowsocks-libev --network=host```
 5. 从容器中拷贝  
   ```docker cp ubnt-mips-shadowsocks-libev:/opt/ss-mips/ss-bin .```
   
 ## mips 与 mips64
 由 ENV 参数 ARCHITECH 判断，默认生成 mips，需要 mips64 在第 4 步的时候替换成下面的命令  
 
-  ```docker run -idt --name ubnt-mips-shadowsocks-libev -e ARCHITECH="mips64" ubnt-mips-shadowsocks-libev```
+  ```docker run -idt --name ubnt-mips-shadowsocks-libev -e ARCHITECH="mips64" ubnt-mips-shadowsocks-libev --network=host```
 
 
